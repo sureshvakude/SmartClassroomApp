@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SmartClassApp</string>
+    <string name="submit">Submit</string>
+    <string name="enter_name">enter name</string>
+    <string name="user_cancelled">user denied the screen sharing permission</string>
+    <string name="stop">stop</string>
+    <string name="start">start</string>
+</resources>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FacultyHomeActivity"
+    android:id="@+id/rootlayout">
+
+    <Button
+        android:id="@+id/btngrpcrt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CREATE GROUP"
+        android:layout_marginLeft="50dp"/>
+
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOff="share screen"
+        android:textOn="stop Sharing"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="50dp"/>
+
+    <TextView
+        android:id="@+id/txtcout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Connected device count : 0"
+        android:layout_below="@+id/btngrpcrt"
+        android:layout_marginLeft="120dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="330dp">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@drawable/divider"
+                android:id="@+id/msgviewcycle"
+                android:dividerHeight="2dp"
+                />
+        </FrameLayout>
+
+
+        <include
+            layout="@layout/type_message_area"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="bottom" />
+
+    </LinearLayout>
+</RelativeLayout>
